@@ -25,8 +25,8 @@ class AssetsAudioPlayer {
   final MethodChannel _channel = const MethodChannel('assets_audio_player');
 
   /// Then mediaplayer playing state (mutable)
-  final BehaviorSubject<bool> _isPlaying =
-      BehaviorSubject<bool>(seedValue: false);
+  final BehaviorSubject<bool> _isPlaying = BehaviorSubject<bool>.seeded(false);
+//      BehaviorSubject<bool>(seedValue: false);
 
   /// Boolean observable representing the current mediaplayer playing state
   ///
@@ -61,8 +61,8 @@ class AssetsAudioPlayer {
   ValueObservable<PlayingAudio> get current => _current.stream;
 
   /// Called when the playing song finished (mutable)
-  final BehaviorSubject<bool> _finished =
-      BehaviorSubject<bool>(seedValue: false);
+  final BehaviorSubject<bool> _finished = BehaviorSubject<bool>.seeded(false);
+      //BehaviorSubject<bool>(seedValue: false);
 
   /// Called when the current song has finished to play
   ///     _assetsAudioPlayer.finished.listen((finished){
@@ -72,8 +72,8 @@ class AssetsAudioPlayer {
   ValueObservable<bool> get finished => _isPlaying.stream;
 
   /// Then current playing song position (in seconds) (mutable)
-  final BehaviorSubject<Duration> _currentPosition =
-      BehaviorSubject<Duration>(seedValue: const Duration());
+  final BehaviorSubject<Duration> _currentPosition = BehaviorSubject<Duration>.seeded(const Duration());
+//      BehaviorSubject<Duration>(seedValue: const Duration());
 
   /// Retrieve directly the current song position (in seconds)
   ///     final Duration position = _assetsAudioPlayer.currentPosition.value;
