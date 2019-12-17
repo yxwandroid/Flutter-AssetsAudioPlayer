@@ -3,8 +3,8 @@ description: Demonstrates how to use the assets_audio_player plugin.
 publish_to: 'none'
 
 environment:
-  sdk: ">=2.0.0-dev.68.0 <3.0.0"
-
+#  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+  sdk: ">=2.2.0 <3.0.0"
 dependencies:
   flutter:
     sdk: flutter
@@ -31,7 +31,9 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - assets/audios/
+    - assets/audios/song1.mp3
+    - assets/audios/song2.mp3
+    - assets/song3.mp3
   fonts:
     - family:  AssetAudioPlayer
       fonts:
